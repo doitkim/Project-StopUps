@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.MenubarForm {
+  display: flex;
+  background-color: #f6f5ef;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  padding: 23px;
+  text-align: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.MenubarForm a div,
+.MenubarForm span {
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 10vw;
+  height: 3vh;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.MenubarForm a {
+  text-decoration: none;
+  color: black;
+}
+
+.MenubarForm a div:hover {
+  background-color: #046241;
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+  transition: all ease 2s 0s;
+  color: white;
+}
+
+.MenubarForm a:hover {
+  transition: all ease 2s 0s;
+}
