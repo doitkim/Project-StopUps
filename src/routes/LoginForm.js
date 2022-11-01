@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../CSS/LoginForm.css";
 
 const LoginForm = () => {
   const onSubmit = (e) => {
@@ -10,8 +11,8 @@ const LoginForm = () => {
     }
   };
   return (
-    <>
-      <form onSubmit={onSubmit}>
+    <div id="LoginWrap">
+      <form id="LoginForm" onSubmit={onSubmit}>
         <input type="email" placeholder="e-mail" required />
         <input
           type="password"
@@ -20,9 +21,9 @@ const LoginForm = () => {
           pattern="^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$"
         />
         <button>로그인</button>
+        <Link to="/register">아직 회원이 아니신가요?</Link>
       </form>
-      <Link to="/register">아직 회원이 아니신가요?</Link>
-    </>
+    </div>
   );
 };
 

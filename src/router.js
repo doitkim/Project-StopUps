@@ -2,6 +2,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Card from "./routes/Card";
 import Drink from "./routes/Drink";
 import Food from "./routes/Food";
+import Footer from "./routes/Footer";
 import Home from "./routes/Home";
 import LoginForm from "./routes/LoginForm";
 import MenuForm from "./routes/MenuForm";
@@ -34,11 +35,12 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
         ) : (
           // 로그인 인증이 미완료시 인증 시 해당경로에 있으면 인증 컴포넌트로 보내버림
           <>
-            <Route exact path="/" element={<LoginForm />} />
             <Route exact path="/register" element={<RegisterForm />} />
+            <Route exact path="*" element={<LoginForm />} />
           </>
         )}
       </Routes>
+      <Footer />
     </Router>
   );
 };

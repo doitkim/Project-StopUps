@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "../CSS/RegisterForm.css";
 
 const RegisterForm = () => {
   const navigate = useNavigate();
@@ -51,8 +52,8 @@ const RegisterForm = () => {
     navigate("/");
   };
   return (
-    <>
-      <form onSubmit={onSubmit}>
+    <div id="RegisterWrap">
+      <form onSubmit={onSubmit} id="RegisterForm">
         <input type="email" placeholder="e-mail" required />
         <input
           type="password"
@@ -78,7 +79,7 @@ const RegisterForm = () => {
           취소
         </button>
       </form>
-    </>
+    </div>
   );
 };
 
