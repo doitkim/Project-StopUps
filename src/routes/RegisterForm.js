@@ -1,3 +1,4 @@
+import Modal from "react-modal/lib/components/Modal";
 import { useNavigate } from "react-router-dom";
 import "../CSS/RegisterForm.css";
 
@@ -52,34 +53,36 @@ const RegisterForm = () => {
     navigate("/");
   };
   return (
-    <div id="RegisterWrap">
-      <form onSubmit={onSubmit} id="RegisterForm">
-        <input type="email" placeholder="e-mail" required />
-        <input
-          type="password"
-          placeholder="영문,대소문자,숫자,특수문자 포함 8~16자"
-          required
-          pattern="^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$"
-        />
-        <input type="text" placeholder="이름" required />
-        <input type="date" placeholder="생년월일" required />
-        <input
-          type="tel"
-          required
-          pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"
-          maxLength="13"
-          placeholder="예) 010-1234-5678"
-        />
-        <button>회원 가입</button>
-        <button
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          취소
-        </button>
-      </form>
-    </div>
+    <Modal isOpen={true} id="RegisterModal">
+      <div id="RegisterWrap">
+        <form onSubmit={onSubmit} id="RegisterForm">
+          <input type="email" placeholder="e-mail" required />
+          <input
+            type="password"
+            placeholder="영문,대소문자,숫자,특수문자 포함 8~16자"
+            required
+            pattern="^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$"
+          />
+          <input type="text" placeholder="이름" required />
+          <input type="date" placeholder="생년월일" required />
+          <input
+            type="tel"
+            required
+            pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"
+            maxLength="13"
+            placeholder="예) 010-1234-5678"
+          />
+          <button>회원 가입</button>
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            취소
+          </button>
+        </form>
+      </div>
+    </Modal>
   );
 };
 

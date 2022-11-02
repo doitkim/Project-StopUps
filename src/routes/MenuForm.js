@@ -59,7 +59,7 @@ const MenuForm = ({ userObj }) => {
   return (
     <div className="MenubarForm">
       <Link to="/">
-        <img src={Logo} />
+        <img src={Logo} width="100" />
       </Link>
 
       <Link to="/drink">

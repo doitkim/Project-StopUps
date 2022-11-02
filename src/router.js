@@ -40,6 +40,7 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
           </>
         )}
       </Routes>
+      {isLoggedIn ? null : <Home />}
       <Footer />
     </Router>
   );

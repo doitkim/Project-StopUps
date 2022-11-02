@@ -1,23 +1,35 @@
+#RegisterModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 44vw;
+  height: 39vh;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #RegisterWrap {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  background-color: aquamarine;
   justify-content: center;
   align-items: center;
 }
 
 #RegisterForm {
-  margin-top: 18vh;
-  margin-bottom: 18vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: stretch;
-  padding: 2vw;
+
   width: 40vw;
   margin-left: auto;
   margin-right: auto;
